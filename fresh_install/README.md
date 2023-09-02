@@ -1,2 +1,2 @@
 This directory contains scripts to be run on a fresh Linux install
-Intended to serve primarily as a package list
+Intended to serve primarily as a package list, written as shell scripts for convenience
