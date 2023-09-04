@@ -6,4 +6,4 @@
 apt install atool
 
 # Helix is a more modern CLI text editor, written in Rust
-snap install helix
+snap install helix --classic
