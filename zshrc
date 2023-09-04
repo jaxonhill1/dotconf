@@ -6,7 +6,7 @@ zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
 # PROMPT='%F{green}%w%f %F{yellow}jhill@JAXON-LT%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-PROMPT='%F{yellow}jhill@JAXON-LT%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{yellow}%n@%m%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
