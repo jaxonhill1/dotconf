@@ -10,6 +10,4 @@ echo "run 'chsh -s $(which zsh)' as a regular user"
 apt install atool
 
 # Helix is a more modern CLI text editor, written in Rust
-add-apt-repository ppa:maveonair/helix-editor
-apt update
-apt install helix
+snap install helix --classic
