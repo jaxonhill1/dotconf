@@ -1,12 +1,33 @@
-# prompt setup
+# configure $PATH --------------------------------------------------------------------------------------------
+
+# add ~/.local/bin to the $PATH
+export PATH="/home/jhill/.local/bin:$PATH"
+
+# add /snap/bin to $PATH
+export PATH="/snap/bin:$PATH"
+
+# add LSPs to the $PATH
+
+
+# configure default editor for Ranger ------------------------------------------------------------------------
+export VISUAL="helix"
+export EDITOR="helix"
+
+# bun completions
+[ -s "/home/jhill/.bun/_bun" ] && source "/home/jhill/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# prompt setup -----------------------------------------------------------------------------------------------
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
-# PROMPT='%F{green}%w%f %F{yellow}jhill@JAXON-LT%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-PROMPT='%F{yellow}%n@%m%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{green}%n@%m%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -21,7 +42,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -lA'
 alias l='ls -CF'
 
 # Set up the prompt
@@ -58,3 +79,5 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+
